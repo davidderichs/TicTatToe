@@ -7,7 +7,7 @@ import java.io.RandomAccessFile;
  * Created by David on 22.01.2018.
  */
 public class TicTacToe {
-    String[] positions;
+    public String[] positions;
     RandomAccessFile saveGame;
 
     TicTacToe(String filePath) throws IOException {
@@ -24,7 +24,8 @@ public class TicTacToe {
         String line;
         int i=0;
         while((line = saveGame.readLine()) != null) {
-            positions[i]=line;
+            positions[i]=line.toString();
+            i++;
         }
     }
 
